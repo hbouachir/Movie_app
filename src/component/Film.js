@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 function Film({filmList}) {
     return (
         <div className="flex">
-           {filmList.map(el=>{
+           {filmList.map(el=>(
                
                <Card>
                 <Card.Img variant="top" src={el.URL} />
@@ -27,7 +27,7 @@ function Film({filmList}) {
 
 
 
-           })
+           ))
            
            
            
