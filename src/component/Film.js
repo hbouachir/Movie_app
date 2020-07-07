@@ -1,12 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../App.css';
 import Card from 'react-bootstrap/Card'
 
 function Film({filmList}) {
+  const [text,setText]=useState('')
+  const [newFilms,setNewFilms]=useState(filmList)
     return (
-        <div className="flex">
-           {filmList.map(el=>(
-               
+      
+      <div>
+        
+      <input type='text' placeholder='entrer nom film' onChange={setText(e.target.value)}/>
+      <button onClick={ setNewFilms(filmList.filter(el=>el.name.indexOf(text)!==-1))}
+              >search</button>
+        
+       { newFilms.map(el=>(
+               <div className="flex">
                <Card>
                 <Card.Img variant="top" src={el.URL} />
                 <Card.Body>
@@ -19,7 +27,8 @@ function Film({filmList}) {
                   <small className="text-muted">Last updated 3 mins ago</small>
                 </Card.Footer>
               </Card>
-              
+              </div>))}
+          
 
 
 
@@ -27,15 +36,15 @@ function Film({filmList}) {
 
 
 
-           ))
+          
            
            
-           
-           }
+          
 
 
 
             
+       
         </div>
     )
 }

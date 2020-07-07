@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Model from './component/Model';
-import Film from './component/Film'
+import Film from './component/Film';
+import Chercher from '/component/Chercher'
 import './App.css';
 
 function App() {
