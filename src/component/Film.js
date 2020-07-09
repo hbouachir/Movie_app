@@ -2,6 +2,7 @@ import React from 'react'
 import '../App.css';
 import Card from 'react-bootstrap/Card'
 import ReactStars from "react-rating-stars-component"
+import '../App.css';
 
 
 function Film({filmList,setKeyword,keyword,setFilmList,newFilms,setNewFilms}) {

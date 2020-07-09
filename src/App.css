@@ -18,4 +18,15 @@ body{height: 100%;
       width:500px}
 
 
+    
+
+.parent {margin: 0% auto;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      /* Magic */
+      display: flex;
+      align-items: center; /* vertical */
+      justify-content: center; /* horizontal */
+  }
 
