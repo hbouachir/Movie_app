@@ -1,3 +1,21 @@
 .flex{display:flex;
       flex-wrap: wrap;
-      align-content: space-around;}
+      justify-content: space-around;
+      align-items: stretch;
+     }
+
+.head{background-color: black;}
+
+.model{text-align: center;
+      background-color: black;}
+.film{text-align: center;
+      background-color: black;}
+.carr{background-color: black;
+      text-align: center;}
+body{height: 100%;
+      background-color: black;}
+.gate{border-radius: 6px;
+      width:500px}
+
+
+

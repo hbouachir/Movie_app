@@ -2,18 +2,19 @@ import React,{useState} from 'react'
 import {Button,Modal} from 'react-bootstrap'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
+import '../App.css';
 
-function Model({film,setFilm,filmList,setFilmList}) {
+function Model({filmList,setFilmList,newFilms,setNewFilms}) {
   const handleChange=e=>{
     setFilm({...film,[e.target.name]:e.target.value})
 
   }
   const [show, setShow] = useState(false);
-
+  const [film,setFilm]=useState({});
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
     return (
-        <div>
+        <div className="model">
            <Button variant="primary" onClick={handleShow}>
         +Add a movie
       </Button>
@@ -51,7 +52,7 @@ function Model({film,setFilm,filmList,setFilmList}) {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={()=>{setFilmList(...filmList,film) ; handleClose();setFilm([])}}>
+          <Button variant="primary" onClick={()=>{setFilmList([...filmList,film]);setNewFilms([...filmList,film]) ; handleClose();setFilm([])}}>
             Save Changes
           </Button>
         </Modal.Footer>
